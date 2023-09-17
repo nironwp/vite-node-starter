@@ -5,9 +5,13 @@ export const info = (message?: any, ...optionalParams: any[]) => {
 };
 
 export const warn = (message?: any, ...optionalParams: any[]) => {
-    console.log(chalk.yellow(`[WARN] ${message}`), ...optionalParams);
+    console.log(chalk.yellow(`[AVISO] ${message}`), ...optionalParams);
 };
 
 export const error = (message?: any, ...optionalParams: any[]) => {
-    console.log(chalk.red(`[ERROR] ${message}`), ...optionalParams);
+    console.log(chalk.red(`[ERRO] ${message}`), ...optionalParams);
+};
+
+export const success = (message?: any, ...optionalParams: any[]) => {
+    console.log(chalk.green(`[SUCESSO] ${message}`), ...optionalParams);
 };
