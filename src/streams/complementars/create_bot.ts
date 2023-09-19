@@ -131,7 +131,6 @@ async function createConnectionForBot(emaiL: string): Promise<ResponseData> {
         );
 
         const connection = await actionsService.createConnectionForBot(emaiL);
-        console.log('connection', connection);
         connectionWhatssap = connection.response;
     } else {
         const prompt = listToNumberedList(
@@ -149,8 +148,6 @@ async function createConnectionForBot(emaiL: string): Promise<ResponseData> {
                 type: 'number',
             },
         ]);
-
-        console.log(whatsappConnections.response);
         connectionWhatssap =
             whatsappConnections.response[groupsQuestions.connection - 1];
     }

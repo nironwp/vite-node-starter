@@ -5,7 +5,6 @@ export default function getEmailsFromJSONFiles(folderPath: string) {
         // Lê todos os arquivos no diretório
         const files = fs.readdirSync(folderPath);
 
-        console.log(files)
         // Filtra os arquivos para pegar apenas os .json
         const jsonFiles = files.filter(
             (file: string) => path.extname(file).toLowerCase() === '.json'

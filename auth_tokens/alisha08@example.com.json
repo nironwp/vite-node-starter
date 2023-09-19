@@ -1,13 +1,13 @@
 {
-  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSWQiOiI2NTA2ZjU4MDAxMmFlNjJlODFjYTc1ZWUiLCJpYXQiOjE2OTQ5NTQ4ODIsImV4cCI6MTY5NTU1OTY4Mn0.iWWBkAEg1i0HTn_H1kWqMzovEXvZzZP_yuvR2BVvJB0",
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDViM2I0NmJmMjY3Nzk3YTFhOWE5NSIsInNlc3Npb25JZCI6IjY1MDZmNTgwMDEyYWU2MmU4MWNhNzVlZSIsImlhdCI6MTY5NDk1NDg4MiwiZXhwIjoxNjk1MjE0MDgyfQ.t-kge4Sw4lR9VxtfMUCu-u4BagvHujAsSc_A52BvmbM",
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSWQiOiI2NTA4YzQyZWEyYWZiZTI5MTRmN2M1NGQiLCJpYXQiOjE2OTUwNzMzMjcsImV4cCI6MTY5NTY3ODEyN30.MDztXLSuP6olFTHBFWFAYj4tUGYYQqqgAR8r5MnwGnI",
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1MDViM2I0NmJmMjY3Nzk3YTFhOWE5NSIsInNlc3Npb25JZCI6IjY1MDhjNDJlYTJhZmJlMjkxNGY3YzU0ZCIsImlhdCI6MTY5NTA3MzMyNywiZXhwIjoxNjk1MzMyNTI3fQ.TfCtiYwqJpltdhflKwdTQKXuURejrZHGKD26OuAUm_Y",
   "plan_data": {
     "name": "Jogo do Bicho",
     "max_bots": 1,
     "max_connections": 1,
     "max_signals": 40
   },
-  "tokenExpires": 1694954885054,
+  "tokenExpires": 1695073330008,
   "user": {
     "_id": "6505b3b46bf267797a1a9a95",
     "email": "alisha08@example.com",

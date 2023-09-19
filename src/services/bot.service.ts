@@ -42,8 +42,31 @@ export class BotService {
         return response.data;
     }
 
-    async deleteBot() {
-        
+    async deleteBot(
+        email: string,
+        botId: string,
+        token: string
+    ): Promise<ResponseData> {
+        try {
+            const response = await axios.delete(
+                'http://localhost:3000/api/bot/' + botId,
+                {
+                    headers: {
+                        Authorization: 'Bearer ' + token,
+                    },
+                }
+            );
+
+            return {
+                error: false,
+                response: response.data,
+            };
+        } catch (error) {
+            return {
+                error: true,
+                response: 'Aconteceu um erro ao tentar deletar o bot',
+            };
+        }
     }
 
     async createStrategieDouble(

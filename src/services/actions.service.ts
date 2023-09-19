@@ -145,7 +145,6 @@ class ActionsService {
                 response: response.data,
             };
         } catch (error: any) {
-            console.log(error);
             return {
                 error: true,
                 response: error.response
@@ -168,7 +167,6 @@ class ActionsService {
             unserialized_number: unserializedNumber,
         });
 
-        console.log(data);
 
         try {
             const user = await authService.readUserData(email);

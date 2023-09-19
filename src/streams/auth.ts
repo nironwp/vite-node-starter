@@ -23,7 +23,6 @@ export default async function AuthStream(): Promise<AccountData | undefined> {
     const authenticationService = authService;
 
     const emails = authenticationService.getAccounts();
-    console.log(emails);
     if (emails.length === 0) {
         return await AuthLogin();
     } else {
@@ -35,7 +34,7 @@ export default async function AuthStream(): Promise<AccountData | undefined> {
                 message: 'O que deseja fazer:',
             },
         ]);
-        if (select.option_select === 'login') {
+        if (select.option_select[0] === 'login') {
             return await AuthLogin();
         } else {
             const accountSelected = await inquirer.prompt([
