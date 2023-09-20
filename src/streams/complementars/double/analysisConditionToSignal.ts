@@ -2,12 +2,11 @@ import { PrismaClient } from '@prisma/client';
 import * as log from '../../../console-logger';
 import { type BotInterface } from '../../../interfaces/bot.interface.js';
 
-
 const prisma = new PrismaClient();
 
 export default async function analysisConditionToSignal(
     botId: string,
-    bot: BotInterface,
+    bot: BotInterface
 ): Promise<boolean> {
     const targetDate = new Date();
 
@@ -32,31 +31,11 @@ export default async function analysisConditionToSignal(
     const currentTime = new Date();
     console.log(currentTime);
 
-    const oldestEntry = await prisma.entrie.findFirst({
-        where: { bot_id: botId },
-        orderBy: { time: 'asc' },
-    });
+    console.log(
+        `Total de entradas: ${totalEntries} objetivo ${bot.max_signal}`
+    );
 
-
-    if (oldestEntry) {
-        const oldestEntryTime = oldestEntry.time;
-        const timeDifferenceInMinutes = Math.floor(
-            (currentTime.getTime() - oldestEntryTime.getTime()) / (1000 * 60)
-        );
-
-        console.log(timeDifferenceInMinutes, bot.finish_time);
-
-        if (timeDifferenceInMinutes >= bot.finish_time) {
-            log.info(
-                // eslint-disable-next-line @typescript-eslint/restrict-plus-operands
-                `Returning false because time difference is bigger ` +
-                    (timeDifferenceInMinutes - bot.finish_time)
-            );
-            return false;
-        }
-    }
-
-    if (totalEntries >= bot.max_signal) {
+    if (totalEntries > bot.max_signal) {
         log.info(
             // eslint-disable-next-line @typescript-eslint/restrict-plus-operands
             `Parando porque o bot atingiu o limite diario de mensagens: ` +
